@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "aplay /home/adrian/.claude/bell-ring.wav 2>/dev/null &"
+            "command": "afplay ~/.claude/bell-ring.wav 2>/dev/null & aplay ~/.claude/bell-ring.wav 2>/dev/null &"
           }
         ]
       }
