@@ -17,7 +17,18 @@
         "hooks": [
           {
             "type": "command",
-            "command": "afplay ~/.claude/bell-ring.wav 2>/dev/null & aplay ~/.claude/bell-ring.wav 2>/dev/null &"
+            "command": "~/.claude/play-notification.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "AskUserQuestion",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/play-notification.sh"
           }
         ]
       }

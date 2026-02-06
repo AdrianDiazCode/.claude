@@ -1,0 +1,2 @@
+#!/bin/bash
+afplay ~/.claude/bell-ring.wav 2>/dev/null & aplay ~/.claude/bell-ring.wav 2>/dev/null &
