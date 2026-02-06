@@ -1,0 +1,15 @@
+# Credentials and secrets
+.credentials.json
+
+# History and personal data
+history.jsonl
+projects/
+
+# Cache and temporary files
+cache/
+debug/
+file-history/
+paste-cache/
+shell-snapshots/
+stats-cache.json
+statsig/
