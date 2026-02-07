@@ -4,7 +4,7 @@
 # History and personal data
 history.jsonl
 projects/
-
+plugins/marketplaces/claude-plugins-official
 # Cache and temporary files
 cache/
 session-env/
