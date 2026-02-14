@@ -32,6 +32,17 @@
           }
         ]
       }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/play-notification.sh"
+          }
+        ]
+      }
     ]
   }
 }
