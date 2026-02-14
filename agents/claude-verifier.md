@@ -1,5 +1,5 @@
 ---
-name: claude-md-updater
+name: claude-verifier
 description: use it when you need to verify the results of anything you did
 model: sonnet
 ---
