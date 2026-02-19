@@ -31,4 +31,8 @@ Before writing any UI code, always follow these steps:
    - Compose smaller components into larger ones
    - Keep business logic separate from presentation
 
+5. **Generic components should be stateless**
+   - They should receive all data and behavior via props
+   - Avoid internal state unless it's purely for UI behavior (e.g., open/closed state of a dropdown)
+
 Always prefer composition over customization. Build UI from a library of reusable building blocks.
