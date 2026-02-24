@@ -4,6 +4,9 @@
 # History and personal data
 history.jsonl
 projects/
+backups/
+plugins/blocklist.json
+plugins/known_marketplaces.json
 tasks/
 plans/
 plugins/marketplaces/claude-plugins-official
