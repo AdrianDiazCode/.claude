@@ -1,13 +1,16 @@
 # Credentials and secrets
 .credentials.json
+daemon/
 
 # History and personal data
 history.jsonl
 projects/
-backups/
+sessions/
 plugins/blocklist.json
 plugins/known_marketplaces.json
 tasks/
+jobs/
+backups/
 plans/
 plugins/marketplaces/claude-plugins-official
 # Cache and temporary files
@@ -21,3 +24,6 @@ paste-cache/
 shell-snapshots/
 stats-cache.json
 statsig/
+daemon.log
+.last-cleanup
+.last-update-result.json

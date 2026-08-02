@@ -10,6 +10,7 @@
       "Bash(git log:*)"
     ]
   },
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "Stop": [
       {
@@ -44,5 +45,7 @@
         ]
       }
     ]
-  }
+  },
+  "editorMode": "vim",
+  "tui": "fullscreen"
 }
