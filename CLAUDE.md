@@ -16,3 +16,9 @@ solution. Do not present a one-off as the primary path.
 - If you mention a quick hack to unblock, mark it clearly as **temporary and secondary** —
   never as the recommended fix.
 - When you deviate from the reproducible path, say so explicitly and explain the trade-off.
+
+## Don't encode sequences as numeric order/priority fields
+
+Use a single ordered array of keys/ids, validated for uniqueness and exhaustiveness
+against the collection — scattered numbers hide the sequence and allow duplicates. Flag
+the pattern in existing code.
