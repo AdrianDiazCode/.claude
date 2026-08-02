@@ -17,6 +17,13 @@ solution. Do not present a one-off as the primary path.
   never as the recommended fix.
 - When you deviate from the reproducible path, say so explicitly and explain the trade-off.
 
+## Single source of truth — the most important principle
+
+Never repeat information that can be inferred or read from somewhere else (CI scripts,
+configs, code, docs). Duplicated values drift silently; derive them from the canonical
+source instead. If duplication is truly unavoidable, add a check that fails when the
+copies diverge.
+
 ## Don't encode sequences as numeric order/priority fields
 
 Use a single ordered array of keys/ids, validated for uniqueness and exhaustiveness
