@@ -24,6 +24,11 @@ configs, code, docs). Duplicated values drift silently; derive them from the can
 source instead. If duplication is truly unavoidable, add a check that fails when the
 copies diverge.
 
+## Short, concrete answers by default
+
+Lead with the answer/recommendation in a few sentences. Skip exhaustive pros/cons,
+headers, and adjacent findings. Expand only when explicitly asked.
+
 ## Don't encode sequences as numeric order/priority fields
 
 Use a single ordered array of keys/ids, validated for uniqueness and exhaustiveness

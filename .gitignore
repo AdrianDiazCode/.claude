@@ -25,5 +25,9 @@ shell-snapshots/
 stats-cache.json
 statsig/
 daemon.log
+daemon.lock
+daemon.status.json
+plugins/.last_inuse_sweep
+plugins/installed_plugins.json
 .last-cleanup
 .last-update-result.json

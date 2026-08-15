@@ -47,6 +47,37 @@
       }
     ]
   },
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true
+  },
+  "tui": "fullscreen",
   "editorMode": "vim",
-  "tui": "fullscreen"
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: None configured",
+      "**Cloud provider(s)**: None configured",
+      "**Repository visibility**: not queryable here — assume private per shipped default (no evidence of public visibility)",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: CI secret names referenced in this repo's workflows: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, ORG_SECRETS_ADMIN, PACKAGES_TOKEN, PAYMENTS_APP_ADMIN_TOKEN, PAYMENTS_CODE_OWNER_TOKEN, SECRET_VALUE (names only, values not gathered)",
+      "**Default / protected branches**: default branch is `master`; protected-branch/ruleset status not queryable here",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Source control**: The trusted repo (github.com:buildman-project/buildman_fe.git) and its origin remote only",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: None configured",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: env files matched by this repo's .gitignore (.env, .env.local, .env.development.local, .env.test.local, .env.production.local, .env.production), and any file/store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; share only with audiences cleared at the [named+specifics] bar",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment (e.g. matches `prod-db`, not `producer`)",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment (k8s.yml in this repo is in scope for this heuristic)",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development (Buildman frontend — Next.js/Redux/React Query app)",
+      "**Trusted repo**: This repo, /Users/adrian/Documents/buildman/buildman-k8/repos/buildman_fe, working directory of the agent, and its origin remote github.com:buildman-project/buildman_fe.git; visibility not confirmed so treat confidential material as OK to commit here but do not assume public-safe",
+      "**Org-specific CLIs**: None configured",
+      "routine under buildman_fe/ prefix: npm scripts (dev, lint, build, test, db, dzl:generate, dzl:migrate, dbdev, storybook) and npx/xcode-select/xcrun/system_profiler tooling seen in this project's transcripts are routine"
+    ]
+  }
 }
