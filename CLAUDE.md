@@ -34,3 +34,19 @@ headers, and adjacent findings. Expand only when explicitly asked.
 Use a single ordered array of keys/ids, validated for uniqueness and exhaustiveness
 against the collection — scattered numbers hide the sequence and allow duplicates. Flag
 the pattern in existing code.
+
+## Every backend logic bug fix ships with a regression test
+
+When fixing a bug in backend logic (a wrong query, calculation, state transition,
+authorization check, ...), always add a test in the repo's existing suite that
+reproduces the failure — not just the fix. The bug existing means the current suite
+didn't cover that case.
+
+- The test must assert the observable behavior that was wrong (e.g. "a fully paid
+  contract reports no debt"), not the implementation detail, so it survives refactors.
+- **Prove it catches the bug**: run it once with the bug temporarily reintroduced and
+  confirm it fails, then restore the fix and confirm the full suite passes.
+- Also cover the inverse/boundary case when cheap, so the fix can't overcorrect
+  (e.g. real debt is still reported).
+- Follow the repo's existing test conventions (level, fixtures, naming); don't invent
+  a new harness for one test.
