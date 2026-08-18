@@ -35,6 +35,21 @@ Use a single ordered array of keys/ids, validated for uniqueness and exhaustiven
 against the collection — scattered numbers hide the sequence and allow duplicates. Flag
 the pattern in existing code.
 
+## Compose components of components — inline maps and repeated markup are extraction signals
+
+Avoid repetition in UI code; favor sensible abstractions. Build components by composing
+smaller components rather than accumulating inline markup.
+
+- A `.map()` whose body renders more than a trivial line of JSX is a strong clue that
+  the body should be its own component. The same goes for long inline conditional
+  blocks and for near-identical markup appearing in more than one place — that must be
+  one shared component, not parallel copies.
+- Before writing a new component, check whether an existing one (project or shared
+  library) already fits or can be composed.
+- When extracting, prefer a generic reusable shape (title/children-style props) and
+  keep the use-case-specific formatting at the call site.
+- Apply this when writing new UI and flag it when touching existing code that violates it.
+
 ## Every backend logic bug fix ships with a regression test
 
 When fixing a bug in backend logic (a wrong query, calculation, state transition,
