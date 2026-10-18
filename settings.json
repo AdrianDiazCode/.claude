@@ -11,7 +11,7 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5[1m]",
+  "model": "claude-fable-5-1[1m]",
   "hooks": {
     "Stop": [
       {
@@ -48,10 +48,20 @@
     ]
   },
   "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": true
+    "swift-lsp@claude-plugins-official": true,
+    "paddle@claude-community": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-community": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-community"
+      }
+    }
   },
   "tui": "fullscreen",
   "editorMode": "vim",
+  "agentPushNotifEnabled": true,
   "autoMode": {
     "environment": [
       "### Org-wide",

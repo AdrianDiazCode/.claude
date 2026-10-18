@@ -12,8 +12,14 @@ tasks/
 jobs/
 backups/
 plans/
-plugins/marketplaces/claude-plugins-official
+plugins/marketplaces/
+plugins/plugin-catalog-cache.json
+plugins/synced/
+skills/synced/
+skills/.trash/
 # Cache and temporary files
+chrome/
+state/
 cache/
 session-env/
 telemetry/

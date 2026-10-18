@@ -65,3 +65,56 @@ didn't cover that case.
   (e.g. real debt is still reported).
 - Follow the repo's existing test conventions (level, fixtures, naming); don't invent
   a new harness for one test.
+
+## Reusable base components: uncontrolled is built ON TOP OF controlled
+
+Every reusable BASE component that holds interaction state (dropdown, stepper,
+tabs, toggler, accordion, ...) must be implemented from its controlled version:
+the controlled API (`value` + `onValueChange`-style props) is the core, and the
+uncontrolled mode is only a thin layer that owns state and feeds that same
+core. The standard shape is hybrid props — optional `value`/`onValueChange`
+with an internal-state fallback when they're omitted. Never ship an
+uncontrolled-only base component.
+
+- Why: uncontrolled-only dead-ends real needs — programmatic jumps, async
+  flows that advance on resolve, deep-linking, resets, state lifted for
+  persistence — and retrofitting control later is a breaking change, while the
+  controlled core costs nothing up front.
+- Exception: SPECIFIC components composed from base components (a ViewToggler
+  built on a TogglerButton, an app form built on inputs) may be
+  uncontrolled-only — they delegate state to their base pieces.
+- Applies to every project, and flag violations when touching existing base
+  components.
+
+## "Step by step" means one step at a time
+
+When I ask for step-by-step guidance, give me **exactly one step**, then stop and ask
+whether to continue before giving the next one. Don't dump the whole sequence.
+
+- This is guidance I'm going to *perform*, so I need to do step one and see what
+  actually happened before step two is even the right step. A full list assumes an
+  outcome for every step that hasn't happened yet.
+- **One step means one thing to do.** If a step has parts — open this menu, then fill
+  that field, then click Upload — those are steps too. Give me the first part, wait,
+  then the next. Never hand me a list of parts to hold in my head; I have very little
+  working memory, and a five-part step is five things I've been asked to remember.
+- Each part still arrives complete: what to do, what I should see when it worked, and
+  what to do if it didn't. Small unit, not a thin one.
+- Wait for me to say continue. If what I report back changes the plan, adjust the
+  remaining steps rather than proceeding with the original next one.
+- Applies whatever the medium — chat, an artifact, a file. If a written record of the
+  whole sequence is genuinely useful, ask first, and still walk me through it one step
+  at a time.
+- It does not apply when I ask you to *do* the work yourself; then just do all of it.
+
+## Commands I must run myself: show first, then ask before copying to the clipboard
+
+When you hand me a command to execute in my own terminal, (1) show it in the
+reply, (2) say you're going to copy it to the clipboard, and (3) **wait for my
+explicit yes** before running `pbcopy`. Never write to the clipboard unasked.
+
+- Why: I often hold something I still need in the clipboard (an API key I just
+  generated and haven't pasted yet, for example). A silent `pbcopy` overwrites
+  it and I lose it — and a one-time secret means regenerating it.
+- Applies to every project and every medium. "Copy this" from me in the same
+  message counts as the yes.
