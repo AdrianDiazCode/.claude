@@ -14,6 +14,7 @@ backups/
 plans/
 plugins/marketplaces/
 plugins/plugin-catalog-cache.json
+plugins/plugin-directory-cache-v2.json
 plugins/synced/
 skills/synced/
 skills/.trash/
@@ -29,6 +30,7 @@ file-history/
 paste-cache/
 shell-snapshots/
 stats-cache.json
+mcp-needs-auth-cache.json
 statsig/
 daemon.log
 daemon.lock
